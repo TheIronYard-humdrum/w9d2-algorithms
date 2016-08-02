@@ -40,8 +40,6 @@ function oddIndexed(number) {
   return odds
 }
 
-// add a simplifier to check if any of the summed
-// or doubled numbers resulted in double digit numbers
 
 function validate(cc) {
   var digits = (""+cc).split(""); //split digits
