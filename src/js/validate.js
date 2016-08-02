@@ -40,22 +40,25 @@ function oddIndexed(number) {
   return odds
 }
 
+// Version one, litteral step by step
 
-function validate(cc) {
-  var digits = (""+cc).split(""); //split digits
-  var odds = oddIndexed(digits); // get all odd indexes
-  var evens = evenIndexed(digits); // get all even idexes
-  var summedEvens = sum(evens); // sum evens
-  var doubledOdds = double(odds); //dobule odds
-  var doubledOddsConsolidated = consolidate(doubledOdds) //consolidate double digit numbers
-  var summedOddsConsolidated = sum(doubledOddsConsolidated) //add sum the newly consolidated digits
-  var total = summedOddsConsolidated + summedEvens; // sum even and odd manipulated
-  if (total % 10 === 0) { // divisible by 10 valid check
-    return true
-  } else {
-    return false
-  }
-}
+// function validate(cc) {
+//   var digits = (""+cc).split(""); //split digits
+//   var odds = oddIndexed(digits); // get all odd indexes
+//   var evens = evenIndexed(digits); // get all even idexes
+//   var summedEvens = sum(evens); // sum evens
+//   var doubledOdds = double(odds); //dobule odds
+//   var doubledOddsConsolidated = consolidate(doubledOdds) //consolidate double digit numbers
+//   var summedOddsConsolidated = sum(doubledOddsConsolidated) //add sum the newly consolidated digits
+//   var total = summedOddsConsolidated + summedEvens; // sum even and odd manipulated
+//   if (total % 10 === 0) { // divisible by 10 valid check
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+//Version two, functions stringed together - easier to read
 
 function validate2(cc) {
   var digits = (""+cc).split("");
