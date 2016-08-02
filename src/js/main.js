@@ -1,6 +1,6 @@
 var visa = 4417123467899113;
 
-function checkForDoubleDigits(number) {
+function consolidate(number) {
   for ( var i = 0; i < number.length; i++ ) {
     let digits = (""+number[i]).split("");
     if (digits.length > 1) {
@@ -49,7 +49,7 @@ function validate(cc) {
   evens = evenIndexed(digits); // get all even idexes
   summedEvens = sum(evens); // sum evens
   doubledOdds = double(odds); //dobule odds
-  doubledOddsConsolidated = checkForDoubleDigits(doubledOdds) //consolidate double digit numbers
+  doubledOddsConsolidated = consolidate(doubledOdds) //consolidate double digit numbers
   summedOddsConsolidated = sum(doubledOddsConsolidated) //add sum the newly consolidated digits
   let total = summedOddsConsolidated + summedEvens; // sum even and odd manipulated
   if (total % 10 === 0) { // divisible by 10 valid check
@@ -57,4 +57,13 @@ function validate(cc) {
   } else {
     return false
   }
+}
+
+function validate2(cc) {
+  let digits = (""+cc).split("");
+  odds = oddIndexed(digits);
+  evens = evenIndexed(digits);
+
+  total = sum(evens) + sum(consolidate(double(odds)))
+  return total % 10 === 0 ? true : false
 }
