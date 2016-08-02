@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background-color: #CBFFF5;
+  h2, p {
+    color: orange;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.container {
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #01715B;
+  form {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    label {
+      max-width: 25%;
+      color: white;
+    }
+    input {
+      width: 45%;
+      border: solid white 1px;
+      border-radius: 3px;
+    }
+    button {
+      width: 25%;
+      background-color: orange;
+      border: none;
+      border-radius: 3px;
+    }
+  }
+}
+
+.info {
+  width: 100%;
+  margin: 0 auto;
+  height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://pixabay.com/static/uploads/photo/2016/07/25/12/48/turquoise-1540436_960_720.png');
+  background-size: 100%;
+  p {
+    width: 85%;
+    line-height: 1.8em;
+    font-size: 1.1em;
+    text-align: justify;
+    color: lighten(orange, 30%);
+    text-shadow: -1px 1px 2px black;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5%;
+  background-color: #01715B;
+}
+
+
+
+
+
